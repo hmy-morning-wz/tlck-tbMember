@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link href="https://g.alicdn.com/mui/common/5.0.5/index.css" rel="stylesheet">
+
+    <script>
+
+      window.g_config = {
+        devId: 'm',
+        language: '',
+        headerVersion: '1.4.0',
+        sl: 'node',
+        regionID: 'CN',
+      };
+      window.__serverTimeStr = '<%= htmlWebpackPlugin.options.now %>';
+      window.__pageSolution = 'pegasus';
+      var docStartTime = Date.now();
+      window._ALI_HYBRID_AUTO_PUSH_WINDOW = true;
+      window._ALI_NATIVE_AUTO_PUSH_WINDOW = true;
+
+
+    </script>
+    <script src="//polyfill.alicdn.com/polyfill.min.js?features=RegeneratorRuntime,default"></script>
+    <script src="//g.alicdn.com/??mui/feloader/5.0.2/feloader-min.js,mui/tes/5.0.13/index.js,pmod/fedata/5.0.62/build-data-service-polyfill.js"></script>
+
+</head>
+<body>
+<div id="mallPage" class="mui-page-cont  ">
+    <section id="content" style="min-height: 100vh;">
+        <div class="mui-zebra-page">
+        </div>
+    </section>
+</div>
+<textarea style="display: none;" id="local-page-info">
+    {
+  "pageInfo": {
+    "title": "ISV开放",
+    "name": "ISV开放",
+    "spma": "a21123",
+    "spmb": "12268209",
+    "url": "https://pages.tmall.com/wow/heihe/act/heybox?wh_biz=tm",
+    "id": 415244,
+    "channelId": 1316,
+    "activityId": 0,
+    "page-group-id": "160146",
+    "page-offline-time": "2099-01-01 00:00:00",
+    "pageStatus": "online",
+    "page-offline-url": "https://heybox.tmall.com/?from=zebra:offline",
+    "schemaVersion": "3b5ec019-0688-4660-a068-2da61891166e",
+    "backgroundData": {
+      "backgroundColor": "#eeeeee",
+      "backgroundImage": "none",
+      "backgroundImageUrl": "",
+      "backgroundPosition": "scroll",
+      "backgroundRepeat": "x",
+      "backgroundLeft": "0",
+      "backgroundTop": "0",
+      "enableBaseColor": false
+    },
+    "plugins": {},
+    "path": "/heihe/act/heybox-phone",
+    "kangarooConfig": {
+      "firstScreenModAmount": 9,
+      "entrySuffix": "/index-bundle",
+      "fellowScreenDynamicAmount": 5,
+      "firstScreenDynamicAmount": 2
+    },
+    "theme": {
+      "floorTitleIcon": "https://gw.alicdn.com/tfs/TB1X6f7dTtYBeNjy1XdXXXXyVXa-120-48.png",
+      "enableBaseColor": false,
+      "backgroundColor": "#eeeeee"
+    },
+    "customConfig": {
+      "includeHtmlDocType": "true",
+      "shareConfig": {
+        "shareTitle": "小黑盒新品",
+        "shareInfo": "新品优选，心意之选",
+        "shareImgUrl": "https://gw.alicdn.com/tfs/TB1zhNaspkoBKNjSZFkXXb4tFXa-200-200.png",
+        "shareBizId": "2688"
+      }
+    },
+    "description": "",
+    "keywords": "",
+    "siteId": 1702,
+    "page-solution": "pegasus-solution",
+    "terminalType": 2,
+    "page-realtime": "0",
+    "page-taoke": false,
+    "createPlatform": "pegasus",
+    "extranetTime": 1545372407967,
+    "offlineTime": 1545372407967,
+    "switchTime": 1545372407967
+  },
+  "modules": [<%= JSON.stringify(htmlWebpackPlugin.options.module) %>],
+  "data": <%= JSON.stringify(htmlWebpackPlugin.options.data) %>,
+  "device": "phone",
+  "sysInfo": {
+    "serverTime": "2018-12-21T06:06:47.695Z",
+    "isAliIntranet": true,
+    "whEnv": "production"
+  },
+  "removeSeed": true,
+  "sectionInfo": {}
+}
+</textarea>
+<script>
+  fetch(`./seed.json`).then(res => res.json()).then((seed) => {
+    require.config(seed)
+
+    const script = document.createElement('script')
+    script.src = './index-bundle.js'
+    document.body.appendChild(script)
+    script.onload = () => {
+      require(['@ali/pmod-core-render/index-bundle'], function (WebBased) {
+        new WebBased().start()
+      })
+    }
+  })
+</script>
+</body>
+</html>

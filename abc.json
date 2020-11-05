@@ -1,0 +1,18 @@
+{
+  "source": "tbe",
+  "type": "application",
+  "group": "custom-brandstreet",
+  "editor": "custom-brandstreet",
+  "options": {},
+  "assets": {
+    "type": "builder",
+    "builder": {
+      "name": "@ali/builder-tmall-isv-h5"
+    }
+  },
+  "projectinfo": {
+    "bu": "custom-brandstreet",
+    "type": "mod"
+  },
+  "npmClient": "npm"
+}

@@ -1,0 +1,59 @@
+{
+  "type": "object",
+  "title": "组件配置",
+  "properties": {
+    "config": {
+      "type": "object",
+      "title": "组件配置",
+      "properties": {
+        "activity": {
+          "type": "array",
+          "title": "活动列表",
+          "items":{
+            "type": "object",
+            "title": "活动",
+            "properties": {
+              "bgImage": 
+              {
+                "type": "string",
+                "title": "商家品牌背景图片",
+                "x-format": "@image('750x520')"
+              },               
+                "sellerId":{
+                  "type": "string",
+                  "title": "商家id"
+                },
+               "activityId":{
+                "type": "string",
+                "title": "活动Id"
+                 },
+               "ruleList":{
+                  "type": "string",
+                  "title": "活动规则"        
+                },
+                "attentionList":{
+                  "type": "string",
+                  "title": "注意事项"        
+                },
+                "time":{
+                  "type": "string",
+                  "title": "活动时间"
+              },
+                "condition":{
+                  "type": "string",
+                  "title": "参与条件"
+              },
+                "resultUrl":{
+                  "type": "string",
+                  "title": "异常URL"                 
+              },"callbackUrl":{
+                "type": "string",
+                "title": "发券URL"               
+            }
+                        }
+                      }
+        }
+      }
+    }
+  }
+}

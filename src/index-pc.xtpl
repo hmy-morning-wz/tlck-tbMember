@@ -1,0 +1,7 @@
+{{! 加载对应的 js 和 css 资源 }}
+{{ require("@ali/mui-kissy-polyfill/index.js") }}
+{{ require ("u2202577470990-tlck-tbMember/index-pc.js") }}
+{{ require ("u2202577470990-tlck-tbMember/index-pc.css") }}
+
+<div data-mod-name="u2202577470990-tlck-tbMember/index-pc" data-config="{}">
+</div>

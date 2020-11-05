@@ -1,0 +1,49 @@
+{
+  "name": "u2202577470990-tlck-tbMember",
+  "description": "天猫ISV开放平台千叶模块",
+  "version": "5.0.29",
+  "logo": "https://gdp.alicdn.com/tfs/TB13d_sfkyWBuNjy0FpXXassXXa-48-48.png",
+  "muiVersion": 5,
+  "feDependencies": {
+    "@ali/pmod-zebra-isv-base": "5.0.x"
+  },
+  "dependencies": {
+    "zebra-isv-base": "^5.0.0",
+    "rax": "^1.0.8"
+  },
+  "devDependencies": {},
+  "sync": false,
+  "syncSource": "pc",
+  "layout": {},
+  "layout-pc": {},
+  "zebra": {
+    "meta-pc": {
+      "bgColor": {
+        "type": "text",
+        "title": "背景颜色",
+        "format": "color"
+      },
+      "bgImage": {
+        "type": "text",
+        "title": "背景图片",
+        "format": "url"
+      },
+      "size": {
+        "type": "text",
+        "title": "模块和上个模块的上边距（如10px）",
+        "format": "unit-px"
+      }
+    },
+    "meta": {
+      "size": {
+        "type": "text",
+        "title": "模块和上个模块的上边距（如10px）",
+        "format": "unit-px"
+      }
+    }
+  },
+  "schema": {},
+  "jsonSchemaVersion": "v2",
+  "isVue": false,
+  "isRem": true
+}
